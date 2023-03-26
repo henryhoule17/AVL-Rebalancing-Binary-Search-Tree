@@ -130,9 +130,10 @@ void BinarySearchTree<Key, Value>::printRoot (Node<Key, Value>* root) const
     std::map<Key, uint8_t> valuePlaceholders;
 
     uint8_t nextPlaceHolderVal = 1;
-    for(typename BinarySearchTree<Key, Value>::iterator treeIter = this->begin(); treeIter != this->end(); ++treeIter)
+    for(typename BinarySearchTree<Key, Value>::iterator treeIter = this->begin(); 
+			treeIter != this->end(); 
+			++treeIter)
     {
-
         if(getNodeDepth(*this, root, treeIter.current_) != -1)
         {
             // note; the iterator will traverse in sorted order so values should get the same placeholders between
